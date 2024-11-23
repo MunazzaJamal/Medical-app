@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:med_app/firebaseLogin/firebase_signup.dart';
 import 'dart:async';
 import 'package:med_app/login.dart';
 
@@ -16,7 +17,7 @@ class _SplashScreen_2State extends State<SplashScreen_2> {
     // Delay of 3 seconds
     Timer(const Duration(seconds: 3), () {
       Navigator.of(context).pushReplacement(
-        MaterialPageRoute(builder: (context) => const LoginScreen()),
+        MaterialPageRoute(builder: (context) => FirebaseSignup()),
       );
     });
   }
