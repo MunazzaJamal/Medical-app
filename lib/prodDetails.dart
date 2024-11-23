@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:med_app/cart.dart';
 import 'package:med_app/func.dart';
 import 'package:med_app/home.dart';
 
@@ -298,7 +299,13 @@ class _ProductScreenState extends State<ProductScreen> {
           ),
           Center(
             child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => CartScreen(),
+                      ));
+                },
                 style: ElevatedButton.styleFrom(
                     fixedSize: const Size(330, 45),
                     backgroundColor: const Color.fromRGBO(65, 87, 255, 1)),
