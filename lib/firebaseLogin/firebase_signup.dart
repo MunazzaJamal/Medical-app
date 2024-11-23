@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:med_app/firebaseLogin/firebase_login.dart';
+import 'package:med_app/splash_1.dart';
 
 class FirebaseSignup extends StatefulWidget {
   const FirebaseSignup({super.key});
@@ -37,6 +38,8 @@ class _FirebaseSignupState extends State<FirebaseSignup> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            logo(clr: Colors.black),
+            const SizedBox(height: 100),
             Container(
               width: 500,
               child: Column(

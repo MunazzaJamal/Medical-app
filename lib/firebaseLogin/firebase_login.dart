@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:med_app/home.dart';
+import 'package:med_app/splash_1.dart';
 
 //registered email: abc@gmail.com
 //password: abc#@!
@@ -52,26 +53,6 @@ class _FirebaseLoginState extends State<FirebaseLogin> {
             );
           },
         );
-        //  else if (e.code == 'wrong-password') {
-        //   print('Wrong password provided for that user.');
-        //   showDialog(
-        //     context: context,
-        //     builder: (BuildContext context) {
-        //       return AlertDialog(
-        //         title: const Text('Login Failed'),
-        //         content: const Text('Wrong password.'),
-        //         actions: [
-        //           TextButton(
-        //             onPressed: () {
-        //               // Close the dialog and allow user to try again
-        //               Navigator.of(context).pop();
-        //             },
-        //             child: const Text('Try Again'),
-        //           ),
-        //         ],
-        //       );
-        //     },
-        //   );
       } else {
         print('Else condition: ${e.code}');
       }
@@ -89,6 +70,8 @@ class _FirebaseLoginState extends State<FirebaseLogin> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            logo(clr: Colors.black),
+            const SizedBox(height: 100),
             Container(
               width: 500,
               child: Column(
